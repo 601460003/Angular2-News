@@ -1,0 +1,18 @@
+div{
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.awesome {
+  color: red;
+  width: 200px;
+  height: 100px;
+  background: black;
+}
+li{
+  list-style-type: none;
+  padding: 10px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}

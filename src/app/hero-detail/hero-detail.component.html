@@ -1,0 +1,17 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
+
+<p>
+  <!--添加@Input() hero 属性-->
+  <!--相当于父组件向子组件传递数据 类似于pro-->
+  <!--父组件 HeroesComponent 将通过把要显示的新英雄发送给子组件 HeroDetailComponent，来控制子组件。-->
+</p>

@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let item of cars">
+    <h2>{{item.cate}}</h2>
+    <ol>
+      <li *ngFor="let car of item.list">
+        {{car.title}}
+        {{car.price}}
+      </li>
+    </ol>
+  </li>
+</ul>
+
+
