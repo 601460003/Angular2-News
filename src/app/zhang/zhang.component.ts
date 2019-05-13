@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 
-//在需要的组件引入定义好的服务
+// 在需要的组件引入定义好的服务
 import {StorageService} from '../services/storage.service';
 
 
@@ -9,9 +9,9 @@ import {StorageService} from '../services/storage.service';
   templateUrl: './zhang.component.html',
   styleUrls: ['./zhang.component.css']
 })
-export class ZhangComponent implements OnInit {
+export class  ZhangComponent implements OnInit {
   // @Input是用来定义模块的输入的，用来让父模块往子模块传递内容，相当于propos
-  //我是子组件
+  // 我是子组件
   @Input() appTitle = '';
   tableData: any[] = [{
     name: '水爷',

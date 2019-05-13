@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-//在需要的组件引入定义好的服务
+ // 在需要的组件引入定义好的服务
 import { StorageService } from '../services/storage.service';
 
 @Component({
@@ -57,12 +57,12 @@ public  cars: any [] = [
   }
 
   ngOnInit() {
-    console.log('页面刷新会触发这个生命周期函数');
-    //判断款存是否存在
-    let searchList: any = this.storage.get('searchList');
-    if (searchList) {
-      this.historyList = searchList;
-    }
+    console.log('页面刷新切换会触发这个生命周期函数');
+    // 判断款存是否存在
+    // let searchList: any = this.storage.get('searchList');
+    // if (searchList) {
+    //   this.historyList = searchList;
+    // }
 
   }
   //

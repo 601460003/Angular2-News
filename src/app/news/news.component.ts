@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
+import {HttpServiceService} from '../services/http-service.service';
 
 @Component({
   selector: 'app-news',
@@ -8,16 +9,23 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 export class NewsComponent implements OnInit {
   @ViewChild('footer') footer: any;
 
+  shopItem = [];
 
-  constructor() {
+
+  constructor(public http: HttpServiceService) {
   }
 
   ngOnInit() {
   }
 
   getChildMsg() {
-   alert(this.footer.msg);
+    alert(this.footer.msg);
   }
+
+  getShopList() {
+    console.log(this.http.getJson());
+  }
+
 
   getChildFn() {
     alert(this.footer.run());

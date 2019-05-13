@@ -3,6 +3,10 @@ h1 {
   color: #fff;
   text-align: center;
   background: #039be5;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-bottom: 5px;
 }
 h2 {
   font-size: 2em;
@@ -25,7 +29,8 @@ nav a:hover {
   background-color: #CFD8DC;
 }
 nav a.active {
-  color: #039be5;
+  color: #fff;
+  background: #039be5;
 }
 .container{
   display: flex;
@@ -36,5 +41,16 @@ nav{
   text-align: center;
 }
 .right{
-  margin-left: 120px;
+  margin-left: 320px;
+  /*overflow: scroll;*/
+  flex: 1;
+  margin-top: 80px;
 }
+.left{
+  overflow: scroll;
+  position: fixed;
+  top: 45px;
+  bottom: 0;
+  padding-right: 20px;
+}
+

@@ -1,4 +1,4 @@
-//用指令自动生成的服务
+// 用指令自动生成的服务
 import {Injectable} from '@angular/core';
 
 @Injectable({

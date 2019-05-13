@@ -1,19 +1,19 @@
 <h1 style="text-align: center">{{firstname|uppercase}} </h1>
 <a routerLink="/zhang">element UI</a>
-<div >
-  <button  (click)="changeName()">点击事件{{firstname}}</button>
-  <div  [class.awesome]="my">动态添加样式{{msg}}</div>
+<div>
+  <button (click)="changeName()">点击事件{{firstname}}</button>
+  <div [class.awesome]="my">动态添加样式{{msg}}</div>
   <ul *ngIf="my">
     <li *ngFor="let item of msg" (click)="changeName()">遍历数据{{item}}</li>
   </ul>
-  <span>双向绑定：</span><input type="text"  [(ngModel)]="heros">
+  <span>双向绑定：</span><input type="text" [(ngModel)]="heros">
   <!--这是花括号{{heros}}绑定数据的插值方法-->
   <p>{{heros}}</p>
 </div>
 
 <!--这是绑定属性的方法[value]="firstname"-->
 <!--vue绑定属性的方法就是bind:value-->
-<input type="text" [value]="firstname" >
+<input type="text" [value]="firstname">
 
 
 <!--//当英雄相同时显示样式-->

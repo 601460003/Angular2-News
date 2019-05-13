@@ -1,17 +1,17 @@
-//你要从 Angular 核心库中导入 Component 符号，并为组件类加上 @Component 装饰器。
-/**
- * 引入装饰器，和生命周期函数
+
+/**从 Angular 核心库中导入 Component 符号
+ * 引入装饰器，和生命周期函数,并为组件类加上 @Component 装饰器
  */
 import { Component, OnInit } from '@angular/core';
 
-//引入hero模块
+// 引入hero模块
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 
-@Component({               //@Component 是个装饰器函数
-  selector: 'app-heroes',  //组件的选择器（CSS 元素选择器）
-  templateUrl: './heroes.component.html', //组件模板文件的位置
-  styleUrls: ['./heroes.component.css']   //组件私有 CSS 样式表文件的位置。
+@Component({               // @Component 是个装饰器函数
+  selector: 'app-heroes',  // 组件的选择器（CSS 元素选择器）
+  templateUrl: './heroes.component.html', // 组件模板文件的位置
+  styleUrls: ['./heroes.component.css']   // 组件私有 CSS 样式表文件的位置。
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
@@ -26,13 +26,12 @@ export class HeroesComponent implements OnInit {
     private heroService: HeroService
   ) { }
 
-  //生命周期
-  ngOnInit() {       //在构造函数之后马上执行复杂的初始化逻辑
-    this.getHeroes(); //在 Angular 设置完输入属性之后，对该组件进行准备。
+  ngOnInit() {           //  生命周期函数==》在构造函数之后马上执行复杂的初始化逻辑
+    this.getHeroes();   // 在 Angular 设置完输入属性之后，对该组件进行准备。
   }
 
   // subscribe 函数把这个英雄数组传给这个回调函数
-  //Void （空类型）- 用在不返回任何值的函数中。
+  // void 代表（空类型）- 用在不返回任何值的函数中。
   getHeroes(): void {
     this.heroService.getHeroes()
     .subscribe(heroes => this.heroes = heroes);
@@ -46,7 +45,7 @@ export class HeroesComponent implements OnInit {
         this.heroes.push(hero);
       });
   }
-//模块，依赖注入，指令，服务，组件，元数据，模板，数据绑定
+// 模块，依赖注入，指令，服务，组件，元数据，模板，数据绑定
   delete(hero: Hero): void {
     this.heroes = this.heroes.filter(h => h !== hero);
     this.heroService.deleteHero(hero).subscribe();
@@ -80,4 +79,7 @@ export class HeroesComponent implements OnInit {
 // 8.依赖注入:   依赖注入渗透在整个 Angular 框架中，被到处使用。
 //  注入器 (injector) 是本机制的核心。注入器负责维护一个容器，用于存放它创建过的服务实例。
 //   注入器能使用提供商创建一个新的服务实例。提供商是一个用于创建服务的配方。把提供商注册到注入器。
+// ”依赖注入” ——，从字面意思上来说分为两个部分：一是依赖，二是注入。也就是说，当一个对象在建立时候，
+// 需要依赖于另一个对象，这是代码层的一种依赖关系；当在代码中声明了依赖关系之后，Angular通过injector注入器
+// 将所依赖的对象进行”注入”操作.
 

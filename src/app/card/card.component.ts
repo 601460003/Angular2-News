@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 
 @Component({
@@ -15,8 +15,8 @@ export class CardComponent implements OnInit {
    * 3.private  私有   只有在当前类才可以访问的属性声明
    */
   public msg: string [] = ['angular1', 'angular2', 'angular3'];
-  public firstname:string = 'Jimmy';
-  public my:boolean = false;
+  public firstname: string = 'Jimmy';
+  public my: boolean = false;
 
   /**
    *  点击事件
@@ -25,7 +25,6 @@ export class CardComponent implements OnInit {
     this.firstname = 'Houssein';
     this.my = !this.my;
   }
-
   constructor() {
   }
 
